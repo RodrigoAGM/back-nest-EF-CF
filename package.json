@@ -9,7 +9,7 @@
     "prebuild": "rimraf dist",
     "copy:manifest": "node -e \"require('fs').copyFile('./manifest.yml', './dist/manifest.yml', function(err) { if (err) console.log(err); console.log('manifest.yml copied!') })\"",
     "copy:travis": "node -e \"require('fs').copyFile('./travis.sh', './dist/travis.sh', function(err) { if (err) console.log(err); console.log('travis.sh copied!') })\"",
-    "copy:ormconfig": "node -e \"require('fs').copyFile('./ormconfig-prod.js', './dist/ormconfig.js', function(err) { if (err) console.log(err); console.log('ormconfig.js copied!') })\"",
+    "copy:ormconfig": "node -e \"require('fs').copyFile('./ormconfig.js', './dist/ormconfig.js', function(err) { if (err) console.log(err); console.log('ormconfig.js copied!') })\"",
     "copy:package": "node -e \"require('fs').copyFile('./package.json', './dist/package.json', function(err) { if (err) console.log(err); console.log('package.json copied!') })\"",
     "build": "nest build",
     "postbuild": "run-p copy:manifest copy:travis copy:ormconfig copy:package",
